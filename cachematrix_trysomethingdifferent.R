@@ -38,8 +38,8 @@ cacheSolve <- function(x) {
         }
         ## if we made it to this stage, then the value retreived for the 
         ## inverse of x is null so, we need to populate it
-        data <- x$get()
-        i <- solve(data)
-        x$setinverse(i)
-        i
+        ## data <- x$get()
+        ## i <- solve(x$get())
+        x$setinverse(solve(x$get()))
+        solve(x$get())
 }
